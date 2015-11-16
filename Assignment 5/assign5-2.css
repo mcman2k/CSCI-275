@@ -1,0 +1,29 @@
+<html>
+<! - - William Dew
+       Assignment 5: Styles
+       CSCI 275
+       Due Date: 2/27/2014 - - >
+<head>
+	<title>Style Sheet</title>
+
+	<style>
+		hr { 
+			border:none; text-align:center; background-color:#008000; color:#008000; height:6px; width:95%; 
+		   }
+ 		
+		.title{
+			text-decoration:underline; color:red; font-size:200%;
+		  }
+		.dir{
+			font-size:small; color:orange; font-family:monospaced;
+		  }
+		.first{
+			color:blue;
+		      }
+		em{font-size:300%; color:blue}
+	
+	</style>
+
+</head>
+
+</html>

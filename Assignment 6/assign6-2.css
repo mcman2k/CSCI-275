@@ -1,0 +1,21 @@
+<html>
+<! - - William Dew
+       Assignment 6: Tables
+       Due Date: 3/22/2014
+       CSCI 275 - - >
+
+<head>
+	<title>Style Sheet</title>
+
+	<style>
+		td{
+			color: yellow;
+		     }
+
+		table{
+			color: yellow;
+			}
+	</style>
+</head>
+
+</html>

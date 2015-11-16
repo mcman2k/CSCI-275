@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<!- - William Dew
+      Assignment 8: Forms
+      CSCI 275
+      Due Date: 4/11/2014 - - >
+       
+	<head>
+		<meta charset="utf8">
+		<title>Assignment 8: Forms</title>
+		<style type="text/css">
+		.title{
+			color:brown;
+			font-family: sans;}
+		.names{
+			color:blue;
+			font-family: sans-serif;}
+		.email{
+			color:green;
+			font-family: sans; }
+		</style>
+	</head>
+
+	<body>
+		<h2><b><center class="title">Technical Support Request</center></b></h2>
+
+		<form method="post" action="mailto:z1692069@students.niu.edu" enctype="text/plain" name="Tech_Support" id="tech_support">
+			
+			<p class="names">	
+				First Name <input type="text" size=16px name="first" id="first">
+				Last Name <input type="text" size=16px name="last" id="last">
+			</p>
+			
+			<p class="email">
+				E-mail address <input type="text" size=16px name="email" id="email">			
+			</p>
+		
+			<p class="title">Customer description</p>
+			
+			<p class="email">	
+				<input type="checkbox" name="student" id="student"/> Student <br>
+				
+				<input type="checkbox" name="instructor" id="instructor"/> Instructor <br>
+				
+				<input type="checkbox" name="other" id="other"> Other <br>
+			</p>
+
+			<p class="names">
+				Product name <input type="text" size=16px name="pname" id="pname">
+				Product type <select name="ptype" size=1 id="ptype">
+					<option>CD-ROM</option>	
+					<option>DVD</option>
+					<option>USB Hub</option>
+					<option>Keyboard</option>
+					<option>Mouse</option>
+					</select>
+			</p>
+			
+			<p>
+				<figcaption class="title">Please give a brief description of the problem:</figcaption>
+				<textarea name="problems" rows="6" cols="60">
+				</textarea>
+			</p>
+			
+			<input type="submit" value="Submit"/>
+			
+			<input type="reset" value="Reset"/>
+		
+		</form>
+	</body>
+
+</html>
+
+			
+				
+		

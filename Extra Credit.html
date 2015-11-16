@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<! - - William Dew
+       Extra Credit: JavaScript Program
+       CSCI 275
+       Due Date: 4/22/2014 - - >
+
+	<head>
+	<meta charset="utf8">
+		<title>Extra Credit: JavaScript Program</title>
+		
+		<! - - Hypothetical Grade Calculator - - >
+
+		<script type="text/javascript">
+			function Calc()
+			{
+				//at is Assignment Total
+				var at=document.getElementById('assigntot').value;
+				//af is Assignment Final
+				var af=document.getElementById('assignpts').value;			
+				//tt is Test Total
+				var tt=document.getElementById('testtot').value;
+				//tf is Test Final
+				var tf=document.getElementById('testpts').value;
+				//calc1 is calculating the average for assignments
+				var calc1=parseFloat(af) / parseFloat(at);
+				//calc2 is calculating the average for the tests and quizzes
+				var calc2=parseFloat(tf) / parseFloat(tt);
+				//finalaverage is calculating the total of the two weighted averages
+				var finalaverage=parseFloat(calc1*.4) + parseFloat(calc2*.6);
+				finalaverage *= 100; //converting to a percentage
+				//returns the finalaverage to the id location in the body
+				document.getElementById('percent2').value=finalaverage.toPrecision(3);
+
+				//conditional statements for the letter grade
+			if(finalaverage == 100 && finalaverage >= 95)
+				document.getElementById('grade').value='A';	
+			if(finalaverage <= 94.9 && finalaverage >= 92)
+				document.getElementById('grade').value='A-';
+			if(finalaverage <= 91.9 && finalaverage >= 89)
+				document.getElementById('grade').value='B+';	
+			if(finalaverage <= 88.9 && finalaverage >= 86)
+				document.getElementById('grade').value='B';		
+			if(finalaverage <= 85.9 && finalaverage >= 83)
+				document.getElementById('grade').value='B-';
+			if(finalaverage <= 82.9 && finalaverage >= 79)
+				document.getElementById('grade').value='C+';
+			if(finalaverage <= 78.9 && finalaverage >= 75)
+				document.getElementById('grade').value='C';			
+			if(finalaverage <= 74.9 && finalaverage >= 70)
+				document.getElementById('grade').value='C-';
+			if(finalaverage <= 69.9 && finalaverage >= 68)
+				document.getElementById('grade').value='D';
+			if(finalaverage <= 67)
+				document.getElementById('grade').value='F'; 
+		}
+		</script>
+	</head>
+
+	<body>
+		<h3>Grade Calculator</h3>
+	<p>Enter your scores and calculate your percentage so far:</p>
+	<! - - form name for the start of the form - ->
+	<form name="Grade Calculator" id="grade calculator">
+		<p>
+				Total assignment points: <input type="text" name="assigntot" id="assigntot">
+				Your assignment points: <input type="text" name="assignpts" id="assignpts">
+		</p>
+		<p>
+				Total test/quiz points: <input type="text" name="testtot" id="testtot">
+				Your test/quiz points: <input type="text" name="testpts" id="testpts">
+		</p>
+		</br>
+		<! - - input type for the "Submit" button - - >
+		<button type="button" id="percent"
+				onclick="Calc();">Submit</button>
+		<! - - input type for the Reset button - - >
+		<button type="reset"
+				onclick="Reset">Reset</button>
+		</br>
+		<! - - input type for the information on the percentage so far - - >
+		<p>Your percentage so far:
+		<input id="percent2" type="text">
+		</br>
+		<! - - input type for the letter grade earned from the calculated function - - >
+		<p>Your letter grade at this point:
+		<input id="grade" type="text">
+	</form>
+	</body>
+</html>
